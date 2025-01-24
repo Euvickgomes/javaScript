@@ -1,0 +1,96 @@
+/*Botao barra de busca*/
+.botao{
+  background-color:red; 
+  color: white;
+  border: none;
+}
+
+.botao:hover {
+    background-color:orange;
+    color: white; 
+  }
+
+/*Titulo*/
+.titulo{
+    color: maroon;
+    font-weight: bold;
+    font-size: 30px;
+    font-family:  'Poppins', sans-serif;
+}
+
+/*Home*/
+.home{
+    font-weight: bold;
+}
+
+.home:hover {
+    color:red;
+  }
+
+/*Categoria*/  
+.categoria{
+    font-weight: bold;
+}
+
+.categoria:hover {
+    color:red;
+  }
+
+/*Subs*/
+.sub:hover {
+    color:red;
+  }
+
+/*Fav*/
+.fav{
+    font-weight: bold;
+}
+
+.fav:hover {
+    color:red;
+  }  
+
+/*ADD*/
+.add{
+    font-weight: bold;
+}
+
+.add:hover {
+    color:red;
+  }  
+  
+/*Sobre Portal*/
+.portal{
+    font-weight: bold;
+}
+
+.portal:hover {
+    color:red;
+  }  
+
+/*Contato*/
+.cont{
+    font-weight: bold;
+}
+
+.cont:hover {
+    color:red;
+  } 
+  
+/*Login*/
+.login{
+    font-weight: bold;
+}
+
+.login:hover {
+    color:red;
+  }  
+
+/*Perfil*/
+.perfil{
+    font-weight: bold;
+}
+
+.perfil:hover {
+    color:red;
+  }  

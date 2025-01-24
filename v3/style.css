@@ -60,7 +60,7 @@
     color:red;
   }  
 
-/*Contato*/
+
 .cont{
     font-weight: bold;
 }
@@ -69,7 +69,6 @@
     color:red;
   } 
   
-/*Login*/
 .login{
     font-weight: bold;
 }
@@ -78,7 +77,6 @@
     color:red;
   }  
 
-/*Perfil*/
 .perfil{
     font-weight: bold;
 }
@@ -89,11 +87,63 @@
 
 .bg-modal{
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(2px) ;
-
+  backdrop-filter: blur(2px);
 }
 
-/*Banner*/
+
+.s-modal{
+  max-width: 500px; 
+  width: 100%; 
+  max-height: 600px; 
+  height: auto; 
+  padding: 2rem; 
+  position: relative;  
+}
+
+.s-modal img {
+  margin-right: 10px;
+}
+
+.s-modal h2 {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-floating {
+  margin-bottom: 1rem;
+}
+
+button.btn {
+  margin-top: 1rem; 
+  font-weight: bold;
+  background-color: #ff6347;
+  border: none;
+}
+
+
+button.btn:hover {
+  background-color: #e5533d;
+}
+
+.btn-close {
+  background-color: #ff6347;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-close:hover {
+  background-color: #e5533d;
+}
+
 .banner{
   background-image:url(imagens/20250124_134535_0000.png);
   background-size: cover; 
@@ -110,7 +160,6 @@
   font-weight: bold;
 }
 
-/*Receitas em Destaque*/
 .receitas-destaque{
   background-color: #f8f9fa;
 }

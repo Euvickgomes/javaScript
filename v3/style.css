@@ -1,0 +1,161 @@
+/*Botao barra de busca*/
+.botao{
+  background-color:red; 
+  color: white;
+  border: none;
+}
+
+.botao:hover {
+    background-color:orange;
+    color: white; 
+  }
+
+/*Home*/
+.home{
+    font-weight: bold;
+}
+
+.home:hover {
+    color:red;
+  }
+
+/*Categoria*/  
+.categoria{
+    font-weight: bold;
+}
+
+.categoria:hover {
+    color:red;
+  }
+
+/*Subs*/
+.sub:hover {
+    color:red;
+  }
+
+/*Fav*/
+.fav{
+    font-weight: bold;
+}
+
+.fav:hover {
+    color:red;
+  }  
+
+/*ADD*/
+.add{
+    font-weight: bold;
+}
+
+.add:hover {
+    color:red;
+  }  
+  
+/*Sobre Portal*/
+.portal{
+    font-weight: bold;
+}
+
+.portal:hover {
+    color:red;
+  }  
+
+/*Contato*/
+.cont{
+    font-weight: bold;
+}
+
+.cont:hover {
+    color:red;
+  } 
+  
+/*Login*/
+.login{
+    font-weight: bold;
+}
+
+.login:hover {
+    color:red;
+  }  
+
+/*Perfil*/
+.perfil{
+    font-weight: bold;
+}
+
+.perfil:hover {
+    color:red;
+  }  
+
+.bg-modal{
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px) ;
+
+}
+
+/*Banner*/
+.banner{
+  background-image:url(imagens/20250124_134535_0000.png);
+  background-size: cover; 
+  background-position: center; 
+  height: 35vh; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  color: white; 
+  text-align: center; 
+}
+
+.titulo{
+  font-weight: bold;
+}
+
+/*Receitas em Destaque*/
+.receitas-destaque{
+  background-color: #f8f9fa;
+}
+
+.receitas-destaque h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6347;
+  margin-bottom: 2rem;
+}
+
+.card {
+  border: none; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #ff6347; 
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e5533d; 
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover; 
+  border-radius: 8px; 
+}  

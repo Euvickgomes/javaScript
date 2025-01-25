@@ -208,3 +208,141 @@ button.btn:hover {
   object-fit: cover; 
   border-radius: 8px; 
 }  
+
+.msgErro{
+  text-align: center;
+  color: red;
+  padding: 10px;
+  display: none;
+}
+
+.msgBom{
+  text-align: center;
+  color: green;
+  padding: 10px;
+  display: none;
+}
+
+.erroLog{
+  text-align: center;
+  color: red;
+  padding: 10px;
+  display: none;
+}
+
+/*Categorias em Destaque*/
+.categoria-destaque{
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6347;
+  margin-bottom: 2rem;
+}
+
+.categorias .card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.categorias .card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.btn-outline-primary{
+  color: #f8f9fa;
+  background-color: #ff6347; 
+  border: none;
+}
+
+.btn-outline-primary:hover{
+  background-color: #e5533d; 
+}
+
+.sair {
+  font-weight: bold;
+  color: gray;      
+}
+
+.sair:hover {
+  color: #ff6347;     
+}
+
+
+/*Dicas de Cozinha*/
+.dicas-destacadas{
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6347;
+  margin-bottom: 2rem;
+}
+
+.dicas-cozinha {
+  background-color: #f8f9fa;
+  color: #333; 
+}
+
+.dicas-cozinha .dica-card {
+  border: none; 
+  background: #ffffff;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dicas-cozinha .dica-card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.dicas-destacadas h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6347;
+  margin-bottom: 2rem;
+}
+
+.dicas-cozinha .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black; 
+}
+
+.dicas-cozinha .card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/*Rodapé*/
+.footer {
+  background-color: #343a40; 
+  color: #f8f9fa;
+  font-size: 0.9rem;
+}
+
+.footer h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  color: #f8f9fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffc107; 
+}
+
+.footer .fab {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.footer .text-center p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #ced4da; 
+}

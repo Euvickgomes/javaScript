@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portal de Receitas Culinárias</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
@@ -52,6 +53,9 @@
               <li class="nav-item">
                 <a class="nav-link perfil" href="#">Registrar</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link sair d-none" href="#">Sair</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -69,12 +73,13 @@
       </div>
     </section>
 
+
     <!--Receitas destaques-->
-    <section class="receitas-destaque py-5">
+    <section id="receitas-em-destaques" class="receitas-destaque py-5">
       <div class="container text-center">
         <!-- Título da Seção -->
         <h2 class="mb-4">Receitas em Destaque</h2>
-        <div class="row">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
           <!--1-->
           <div class="col-md-4">
             <div class="card">
@@ -102,7 +107,7 @@
             <div class="card">
               <img src="imagens/file-ao-molho.jpg" class="card-img-top">
               <div class="card-body">
-                <h5 class="card-title">Filé ao Molho de Mostarda com Batatas</h5>
+                <h5 class="card-title">Filé ao Molho de Mostarda</h5>
                 <p class="card-text">Saudável e cheio de sabor. Perfeito para qualquer hora.</p>
                 <a href="#" class="btn btn-primary">Ver Receita</a>
               </div>
@@ -124,7 +129,7 @@
             <div class="card">
               <img src="imagens/dadinho-tapioca.jpg" class="card-img-top">
               <div class="card-body">
-                <h5 class="card-title">Dadinho de Tapioca</h5>
+                <h5 class="card-title">Dadinho de Tapioca com Molho Agridoce</h5>
                 <p class="card-text">Refrescante e fácil de fazer. Experimente!</p>
                 <a href="#" class="btn btn-primary">Ver Receita</a>
               </div>
@@ -167,54 +172,219 @@
       </div>
     </section>
     
-    <div class="bg-modal d-flex justify-content-center align-items-center position-fixed top-0 start-0 w-100 h-100 d-none">
+    <div class="bg-modal d-flex justify-content-center align-items-center position-fixed top-0 start-0 w-100 h-100 d-none" id="modalLog">
       <div class="s-modal bg-white p-3 rounded-2">
 
-        <button type="button" class="btn btn-close position-absolute top-0 end-0 me-3 mt-3"></button>
+        <button type="button" class="btn btn-close position-absolute top-0 end-0 me-3 mt-3" id="fechar" onclick="fechar(event)"></button>
 
         <form action="" class="">
           <h2>
             <img src="imagens/logo.png" width="50" height="50" alt=""> Login
           </h2>
           <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="email.exemplo@gmail.com">
-            <label for="floatingInput">Email</label>
+            <input type="email" class="form-control" id="emailLog" placeholder="email.exemplo@gmail.com">
+            <label id="emailLabel">Email</label>
           </div>
           <div class="form-floating">
-            <input type="password" class="form-control" id="floatingInput" placeholder="***********">
-            <label for="floatingInput">Senha</label>
+            <input type="password" class="form-control" id="senhaLog" placeholder="***********">
+            <label id="senhaLabel">Senha</label>
           </div>
-          <button class="btn btn-primary w-100 py-2 p-2">Login</button>
+          <div id="erroLog"></div>
+          <button class="btn btn-primary w-100 py-2 p-2" onclick="entrar(event)">Login</button>
         </form>
       </div>
     </div>
 
-    <div class="bg-modal d-flex justify-content-center align-items-center position-fixed top-0 start-0 w-100 h-100 d-none">
+    <div class="bg-modal d-flex justify-content-center align-items-center position-fixed top-0 start-0 w-100 h-100 d-none" id="modalReg">
       <div class="s-modal bg-white p-3 rounded-2">
 
-        <button type="button" class="btn btn-close position-absolute top-0 end-0 me-3 mt-3"></button>
+        <button type="button" class="btn btn-close position-absolute top-0 end-0 me-3 mt-3" onclick="fecharReg(event)"></button>
 
         <form action="" class="">
           <h2>
             <img src="imagens/logo.png" width="50" height="50" alt=""> Registre-se
           </h2>
           <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Nome">
-            <label for="floatingInput">Nome</label>
+            <input type="text" class="form-control" id="nome" placeholder="Nome">
+            <label id="labelNome">Nome</label>
           </div>
           <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="email.exemplo@gmail.com">
-            <label for="floatingInput">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="email.exemplo@gmail.com">
+            <label id="labelEmail">Email</label>
           </div>
           <div class="form-floating">
-            <input type="password" class="form-control" id="floatingInput" placeholder="***********">
-            <label for="floatingInput">Senha</label>
+            <input type="password" class="form-control" id="senha" placeholder="***********">
+            <label id="labelSenha">Senha</label>
           </div>
-          <button class="btn btn-primary w-100 py-2 p-2">Registar</button>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="confSenha" placeholder="***********">
+            <label id="labelConfSenha">Confirmar Senha</label>
+          </div>
+
+          <div id="msgErro" class="msgErro"></div>
+          <div id="msgBom" class="msgBom"></div>
+
+          <button onclick='cadastrar(event)' class="btn btn-primary w-100 py-2 p-2">Registar</button>
         </form>
       </div>
     </div>
 
+        <!-- Sessão de Categorias -->
+<section id="sessao-categorias" class="categorias py-5">
+  <div class="container text-center">
+    <!-- Título da Seção -->
+    <h2 class="mb-4 categoria-destaque">Explore Categorias</h2>
+    <p class="mb-5">Veja as categorias mais acessadas pelos usuários.</p>
+    
+    <!--Grade de Categorias-->
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4">
+      <!-- Categoria 1 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagens/bolos.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Bolos</h5>
+            <a href="#" class="btn btn-outline-primary">Explorar</a>
+          </div>
+        </div>
+      </div>
+      <!-- Categoria 2 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagens/pratos-principais.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Pratos Principais</h5>
+            <a href="#" class="btn btn-outline-primary">Explorar</a>
+          </div>
+        </div>
+      </div>
+      <!--Categoria 3-->
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagens/sobremesas.webp" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Sobremesas</h5>
+            <a href="#" class="btn btn-outline-primary">Explorar</a>
+          </div>
+        </div>
+      </div>
+      <!--Categoria 4-->
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagens/molhos.webp" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Molhos</h5>
+            <a href="#" class="btn btn-outline-primary">Explorar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!--Dicas de Cozinha-->
+    <section id="dicas-de-cozinha" class="dicas-cozinha py-5">
+      <div class="container text-center">
+        <!--Título-->
+        <h2 class="mb-4 dicas-destacadas">Dicas de Cozinha</h2>
+        <div class="row">
+          <!--Dica 1-->
+          <div class="col-md-4 mb-4">
+            <div class="card dica-card shadow">
+              <div class="card-body">
+                <h5 class="card-title">1. Como Escolher Ingredientes Frescos</h5>
+                <p class="card-text">Prefira frutas e verduras da estação, pois são mais saborosas e econômicas.</p>
+              </div>
+            </div>
+          </div>
+          <!--Dica 2-->
+          <div class="col-md-4 mb-4">
+            <div class="card dica-card shadow">
+              <div class="card-body">
+                <h5 class="card-title">2. Use Ervas Frescas</h5>
+                <p class="card-text">Adicione ervas frescas no final do preparo para preservar o sabor e aroma.</p>
+              </div>
+            </div>
+          </div>
+          <!--Dica 3-->
+          <div class="col-md-4 mb-4">
+            <div class="card dica-card shadow">
+              <div class="card-body">
+                <h5 class="card-title">3. Como Descongelar Corretamente</h5>
+                <p class="card-text">Sempre descongele alimentos na geladeira para evitar a proliferação de bactérias.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!--Dica 4-->
+          <div class="col-md-4 mb-4">
+            <div class="card dica-card shadow">
+              <div class="card-body">
+                <h5 class="card-title">4. Afie Suas Facas</h5>
+                <p class="card-text">Facas afiadas tornam o corte mais preciso e evitam acidentes na cozinha.</p>
+              </div>
+            </div>
+          </div>
+          <!--Dica 5-->
+          <div class="col-md-4 mb-4">
+            <div class="card dica-card shadow">
+              <div class="card-body">
+                <h5 class="card-title">5. Evite Desperdício</h5>
+                <p class="card-text">Utilize cascas de legumes para fazer caldos caseiros deliciosos e nutritivos.</p>
+              </div>
+            </div>
+          </div>
+          <!--Dica 6-->
+          <div class="col-md-4 mb-4">
+            <div class="card dica-card shadow">
+              <div class="card-body">
+                <h5 class="card-title">6. Como Salvar Um Molho Salgado</h5>
+                <p class="card-text">Adicione uma batata crua no molho e deixe cozinhar por alguns minutos para absorver o sal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!--Footer-->
+      <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+          <div class="row">
+            <!-- Sobre -->
+            <div class="col-md-4 mb-4">
+              <h5>Sobre Nós</h5>
+              <p>Somos apaixonados por compartilhar receitas incríveis e dicas práticas para transformar sua experiência na cozinha!</p>
+            </div>
+            <!-- Links Rápidos -->
+            <div class="col-md-4 mb-4">
+              <h5>Links Rápidos</h5>
+              <ul class="list-unstyled">
+                <li><a href="#receitas-em-destaques" class="text-white text-decoration-none">Receitas</a></li>
+                <li><a href="#sessao-categorias" class="text-white text-decoration-none">Categorias</a></li>
+                <li><a href="#dicas-de-cozinha" class="text-white text-decoration-none">Dicas de Cozinha</a></li>
+                <li><a href="#" class="text-white text-decoration-none">Contato</a></li>
+              </ul>
+            </div>
+            <!-- Redes Sociais -->
+            <div class="col-md-4 mb-4">
+              <h5>Siga-nos</h5>
+              <div>
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" class="text-white"><i class="fab fa-twitter"></i> Twitter</a>
+              </div>
+            </div>
+          </div>
+          <!-- Copyright -->
+          <div class="text-center mt-4">
+            <p>&copy; 2025 Receitas Deliciosas. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </footer>
+
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

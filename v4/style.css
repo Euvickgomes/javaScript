@@ -1,0 +1,379 @@
+/* Navbar */
+.navbar-nav {
+  align-items: center;
+}
+
+/* Icons alignment and spacing */
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-nav .nav-item i {
+  font-size: 1.5rem; /* Tamanho consistente para os ícones */
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item i:hover {
+  color: #ff6347;
+}
+
+.navbar-nav .nav-item.me-3 {
+  margin-right: 1rem; /* Espaçamento consistente entre ícones */
+}
+
+.navbar-nav .dropdown-menu {
+  min-width: 150px; /* Ajusta o tamanho do dropdown */
+  text-align: center;
+}
+
+/*Botao barra de busca*/
+.botao{
+  background-color:red; 
+  color: white;
+  border: none;
+}
+
+.botao:hover {
+    background-color:orange;
+    color: white; 
+  }
+
+/*Home*/
+.home{
+    font-weight: bold;
+}
+
+.home:hover {
+    color:red;
+  }
+
+/*Categoria*/  
+.categoria{
+    font-weight: bold;
+}
+
+.categoria:hover {
+    color:red;
+  }
+
+/*Subs*/
+.sub:hover {
+    color:red;
+  }
+
+/*Fav*/
+.fav{
+    font-weight: bold;
+}
+
+.fav:hover {
+    color:red;
+  }  
+
+/*ADD*/
+.add{
+    font-weight: bold;
+}
+
+.add:hover {
+    color:red;
+  }  
+  
+/*Sobre Portal*/
+.portal{
+    font-weight: bold;
+}
+
+.portal:hover {
+    color:red;
+  }  
+
+
+.cont{
+    font-weight: bold;
+}
+
+.cont:hover {
+    color:red;
+  } 
+  
+.login{
+    font-weight: bold;
+}
+
+.login:hover {
+    color:red;
+  }  
+
+.perfil{
+    font-weight: bold;
+}
+
+.perfil:hover {
+    color:red;
+  }  
+
+.bg-modal{
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+
+.s-modal{
+  max-width: 500px; 
+  width: 100%; 
+  max-height: 600px; 
+  height: auto; 
+  padding: 2rem; 
+  position: relative;  
+}
+
+.s-modal img {
+  margin-right: 10px;
+}
+
+.s-modal h2 {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-floating {
+  margin-bottom: 1rem;
+}
+
+button.btn {
+  margin-top: 1rem; 
+  font-weight: bold;
+  background-color: #ff6347;
+  border: none;
+}
+
+
+button.btn:hover {
+  background-color: #e5533d;
+}
+
+.btn-close {
+  background-color: #ff6347;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-close:hover {
+  background-color: #e5533d;
+}
+
+.banner{
+  background-image:url(imagens/20250124_134535_0000.png);
+  background-size: cover; 
+  background-position: center; 
+  height: 35vh; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  color: white; 
+  text-align: center; 
+}
+
+.titulo{
+  font-weight: bold;
+}
+
+.receitas-destaque{
+  background-color: #f8f9fa;
+}
+
+.receitas-destaque h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6347;
+  margin-bottom: 2rem;
+}
+
+.card {
+  border: none; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #ff6347; 
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e5533d; 
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover; 
+  border-radius: 8px; 
+}  
+
+.msgErro{
+  text-align: center;
+  color: red;
+  padding: 10px;
+  display: none;
+}
+
+.msgBom{
+  text-align: center;
+  color: green;
+  padding: 10px;
+  display: none;
+}
+
+.erroLog{
+  text-align: center;
+  color: red;
+  padding: 10px;
+  display: none;
+}
+
+/*Categorias em Destaque*/
+.categoria-destaque{
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6347;
+  margin-bottom: 2rem;
+}
+
+.categorias .card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.categorias .card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.btn-outline-primary{
+  color: #f8f9fa;
+  background-color: #ff6347; 
+  border: none;
+}
+
+.btn-outline-primary:hover{
+  background-color: #e5533d; 
+}
+
+.sair {
+  font-weight: bold;
+  color: gray;      
+}
+
+.sair:hover {
+  color: #ff6347;     
+}
+
+
+/*Dicas de Cozinha*/
+.dicas-destacadas{
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6347;
+  margin-bottom: 2rem;
+}
+
+.dicas-cozinha {
+  background-color: #f8f9fa;
+  color: #333; 
+}
+
+.dicas-cozinha .dica-card {
+  border: none; 
+  background: #ffffff;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dicas-cozinha .dica-card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.dicas-destacadas h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6347;
+  margin-bottom: 2rem;
+}
+
+.dicas-cozinha .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black; 
+}
+
+.dicas-cozinha .card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/*Rodapé*/
+.footer {
+  background-color: #343a40; 
+  color: #f8f9fa;
+  font-size: 0.9rem;
+}
+
+.footer h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  color: #f8f9fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffc107; 
+}
+
+.footer .fab {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.footer .text-center p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #ced4da; 
+}

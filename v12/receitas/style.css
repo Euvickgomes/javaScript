@@ -1,0 +1,443 @@
+/*Receita 1*/
+
+/*Botao barra de busca*/
+.botao{
+    background-color:red; 
+    color: white;
+    border: none;
+  }
+  
+  .botao:hover {
+      background-color:orange;
+      color: white; 
+    }
+  
+  /*Home*/
+  .home{
+      font-weight: bold;
+  }
+  
+  .home:hover {
+      color:red;
+    }
+  
+  /*Categoria*/  
+  .categoria{
+      font-weight: bold;
+  }
+  
+  .categoria:hover {
+      color:red;
+    }
+  
+  /*Subs*/
+  .sub:hover {
+      color:red;
+    }
+  
+  /*Fav*/
+  .fav{
+      font-weight: bold;
+  }
+  
+  .fav:hover {
+      color:red;
+    }  
+  
+  /*ADD*/
+  .add{
+      font-weight: bold;
+  }
+  
+  .add:hover {
+      color:red;
+    }  
+    
+  /*Sobre Portal*/
+  .portal{
+      font-weight: bold;
+  }
+  
+  .portal:hover {
+      color:red;
+    }  
+  
+  
+  .cont{
+      font-weight: bold;
+  }
+  
+  .cont:hover {
+      color:red;
+    } 
+    
+  .login{
+      font-weight: bold;
+  }
+  
+  .login:hover {
+      color:red;
+    }  
+  
+  .perfil{
+      font-weight: bold;
+  }
+  
+  .perfil:hover {
+      color:red;
+    }  
+  
+  .bg-modal{
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+  }
+  
+  
+  .s-modal{
+    max-width: 500px; 
+    width: 100%; 
+    max-height: 600px; 
+    height: auto; 
+    padding: 2rem; 
+    position: relative;  
+  }
+  
+  .s-modal img {
+    margin-right: 10px;
+  }
+  
+  .s-modal h2 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-floating {
+    margin-bottom: 1rem;
+  }
+  
+  button.btn {
+    margin-top: 1rem; 
+    font-weight: bold;
+    background-color: #ff6347;
+    border: none;
+  }
+  
+  
+  button.btn:hover {
+    background-color: #e5533d;
+  }
+  
+  .btn-close {
+    background-color: #ff6347;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-close:hover {
+    background-color: #e5533d;
+  }
+
+  #favoritarBtn {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+#favoritarBtn.favorito {
+    color: #ff6600; /* Cor laranja para quando o favorito é ativado */
+}
+
+#favoritarBtn.favorito i {
+    color: #ff6600;
+}
+
+
+
+ /*corpo*/
+ body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .cima {
+    background-color:rgb(227, 227, 227); 
+    color: black;
+    padding: 60px 20px; 
+    text-align: center; 
+    border-bottom: 4px solid white;
+  }
+  
+  .cima h1 {
+    font-size: 3.5rem;  
+    font-weight: bold;
+  }
+  
+  .cima p {
+    font-size: 1.25rem;  
+    font-weight: 300; 
+    max-width: 800px;  
+    margin: 0 auto;  
+  }
+  
+  
+  
+  .titulo-receita h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6347;
+    margin-bottom: 2rem;
+  }
+ 
+  /*Ingredientes*/  
+  .ingredients-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .ingredients-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .ingredients-list li:hover {
+    background-color: #ffebcd;
+    transform: translateY(-2px);
+  }
+  
+  .ingredients-list input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ingredients-list label {
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #34495e;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  .ingredients-list input[type="checkbox"]:checked + label {
+    color: #ff6347;
+    text-decoration: line-through;
+  }
+  
+  .ingredients-list input[type="checkbox"]:checked {
+    background-color: #ff6347;
+    border: none;
+  }
+  
+  .ingredients-list input[type="checkbox"]:hover {
+    background-color: #ff6347;
+    border-radius: 50%;
+  }
+
+   /*Modo de Preparo*/  
+  .preparation-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: step-counter; 
+  }
+  
+  .preparation-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px; 
+    font-size: 1.1rem; 
+    line-height: 1.6; 
+    background-color: #ffffff;
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 15px;
+  }
+  
+  .step-number {
+    flex-shrink: 0;
+    width: 30px; 
+    height: 30px; 
+    margin-right: 15px; 
+    background-color: #ff6347; 
+    color: #ffffff; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .preparation-list li:hover {
+    background-color: #f9f9f9; 
+    transform: translateY(-2px); 
+    transition: all 0.3s ease;
+  }
+  
+  .dicas-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dica-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .dica-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #ff6347;
+  }
+  
+  .dica-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dica-item p {
+    margin: 0;
+  }
+  
+
+  /*Rodapé*/
+  .footer {
+    background-color: #343a40; 
+    color: #f8f9fa;
+    font-size: 0.9rem;
+    padding: 40px 20px;
+  }
+  
+  .footer h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #ffc107; 
+  }
+  
+  .footer .fab {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+  
+  .footer .text-center p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #ced4da; 
+  }
+
+/*Banner*/
+  .banner-receitas {
+    position: relative; 
+    width: 100%;
+    height: 500px; 
+    overflow: hidden; 
+  }
+  
+  .banner-receitas .banner-img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .banner-receitas {
+      height: 200px; 
+    }
+  }
+
+  /*Comentarios*/
+.comentarios {
+  background-color: #f8f9fa;
+  padding-top: 2rem;
+}
+
+#comentario-form textarea {
+  resize: none;
+}
+
+.comments-container {
+  margin-top: 2rem;
+}
+
+.comment {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.comment .user-name {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.comment .comment-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .comentarios {
+    padding-top: 1rem;
+  }
+}
+
+/* Estilos do Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
